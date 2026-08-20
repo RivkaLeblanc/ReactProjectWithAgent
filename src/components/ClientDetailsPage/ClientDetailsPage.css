@@ -1,0 +1,76 @@
+.client-details-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.client-details-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0d47a1;
+}
+
+.details-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-view p {
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  border-left: 4px solid #2196f3;
+}
+
+.details-view strong {
+  color: #0d47a1;
+  margin-right: 10px;
+}
+
+.details-view button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  align-self: center;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edit-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-form label {
+  font-weight: 600;
+  color: #0d47a1;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.edit-form input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.edit-form button {
+  padding: 12px 30px;
+  margin-top: 10px;
+}
+
+.edit-form button:last-child {
+  background: #757575;
+}

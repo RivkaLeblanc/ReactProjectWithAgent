@@ -1,0 +1,178 @@
+.agent-chat-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.agent-chat-container {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #0d47a1;
+  color: white;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+  background: #f5f7fa;
+}
+
+.chat-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.chat-bubble.user {
+  flex-direction: row-reverse;
+}
+
+.bubble-avatar {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.bubble-text {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 75%;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-bubble.user .bubble-text {
+  background: #0d47a1;
+  color: white;
+}
+
+/* Typing animation */
+.bubble-text.typing {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 14px;
+}
+
+.bubble-text.typing span {
+  width: 8px;
+  height: 8px;
+  background: #0d47a1;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+.bubble-text.typing span:nth-child(2) { animation-delay: 0.15s; }
+.bubble-text.typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+
+/* Confirm bar */
+.confirm-bar {
+  padding: 16px 20px;
+  background: #fff8e1;
+  border-top: 2px solid #ffc107;
+  text-align: center;
+}
+
+.confirm-bar p {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-approve {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-approve:hover { background: #1b5e20; }
+
+.btn-reject {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-reject:hover { background: #b71c1c; }
+
+/* Input area */
+.chat-input-area {
+  padding: 16px 20px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+}
+
+.chat-input-area input {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chat-input-area input:focus {
+  border-color: #2196f3;
+}
+
+.chat-input-area button {
+  padding: 11px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-input-area button:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.chat-input-area button:disabled {
+  background: #90a4ae;
+  cursor: not-allowed;
+}
