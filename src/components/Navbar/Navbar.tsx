@@ -16,6 +16,7 @@ const Navbar = () => {
       <div className="navbar-links">
         <button className={isActive('/products')} onClick={() => navigate('/products')}>Products</button>
         <button className={isActive('/personalDetails')} onClick={() => navigate('/personalDetails')}>My Details</button>
+        {isAdmin && <button className={isActive('/products/add')} onClick={() => navigate('/products/add')}>Add Product</button>}
         {isAdmin && <button className={isActive('/agent')} onClick={() => navigate('/agent')}>Agent - Add Products</button>}
       </div>
     </nav>

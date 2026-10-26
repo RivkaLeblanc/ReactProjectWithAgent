@@ -70,9 +70,18 @@ const ProductReviewsPage = ({ productId }: ReviewsProps) => {
 
 
   const handleDelete = async (id: number) => {
-    await fetch(`${API}/reviews/${id}`, {
-    });
-    fetchReviews();
+    try {
+      const response = await fetch(`${API}/reviews/${id}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to delete review (${response.status})`);
+      }
+      await fetchReviews();
+    } catch (err) {
+      console.error("Error deleting review:", err);
+      alert("Failed to delete review. Please try again.");
+    }
   };
 
 

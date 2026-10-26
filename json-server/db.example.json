@@ -1,0 +1,68 @@
+{
+  "SKIES": [
+    {
+      "id": "ski-001",
+      "product_id": "SKI001",
+      "product_type": "SKIES",
+      "name": "Alpine Edge 88",
+      "gender": "Unisex",
+      "price_usd": 549,
+      "description": "A versatile all-mountain ski designed for confident turns on groomed runs and changing snow.",
+      "image_url": "http://localhost:5173/images/skies/skies-1.jpg",
+      "units_sold": 18
+    }
+  ],
+  "BOOTS": [
+    {
+      "id": "boot-001",
+      "product_id": "BOOT001",
+      "product_type": "BOOTS",
+      "name": "Summit Flex 100",
+      "gender": "Men",
+      "price_usd": 399,
+      "description": "A supportive alpine boot that balances precise control with comfort for long days on the mountain.",
+      "image_url": "http://localhost:5173/images/boots/boots-1.jpg",
+      "units_sold": 12
+    }
+  ],
+  "GOGGLES": [
+    {
+      "id": "gog-001",
+      "product_id": "GOG001",
+      "product_type": "GOGGLES",
+      "name": "Aurora Vista",
+      "gender": "Unisex",
+      "price_usd": 149,
+      "description": "Wide-view goggles with a comfortable fit for clear vision across a range of winter conditions.",
+      "image_url": "http://localhost:5173/images/goggles/goggles-1.jpg",
+      "units_sold": 25
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Snow",
+      "lastName": "Admin",
+      "email": "admin@snowgood.test",
+      "password": "Admin123!",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "firstName": "Alex",
+      "lastName": "Skier",
+      "email": "customer@snowgood.test",
+      "password": "Customer123!",
+      "role": "user"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-001",
+      "product_id": "SKI001",
+      "user_id": 2,
+      "rating": 5,
+      "comment": "Stable and predictable on groomed trails. A great all-day ski."
+    }
+  ]
+}
